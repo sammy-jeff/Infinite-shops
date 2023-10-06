@@ -87,21 +87,21 @@ const Home =async () => {
           <h2 className='text-center relative text-[#607d8b] text-[clamp(22px,4vw,30px)] flex flex-col items-center gap-y-2 '>Testmonials<span className='w-[60px] h-[3px] bg-[#607d8b]'></span></h2>
           <div className='mt-8 flex flex-col gap-y-8 px-3 lg:flex-row text-[#3a3a3a] lg:gap-x-4 '>
             <div className='flex flex-col items-center justify-center gap-y-4 text-center'>
-              <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo"</p>
+              <p>&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo&quot;</p>
               <div className='flex items-center'>
                 <Image src={pic1} alt='pic1' className='w[60px] h-[60px] object-contain'/>
                 <p>Paul Smitten</p>
               </div>
             </div>
             <div className='flex flex-col items-center justify-center gap-y-4 text-center'>
-            <p>"Convallis lacinia optio! Hac morbi laboris deleniti, hymenaeos, nihil, magnis corrupti nisl dis dolores aptent eveniet nostrud eu"</p>
+            <p>&quot;Convallis lacinia optio! Hac morbi laboris deleniti, hymenaeos, nihil, magnis corrupti nisl dis dolores aptent eveniet nostrud eu&quot;</p>
               <div className='flex items-center'>
                 <Image src={pic2} alt='pic1' className='w[60px] h-[60px] object-contain'/>
                 <p>Lauren Lane</p>
               </div>
             </div>
             <div className='flex flex-col items-center justify-center gap-y-4 text-center'>
-            <p>"Semper laboris possimus, molestiae, anim ornare? Molestie! Dictumst scelerisque error, autem leo. Autem integer diamlorem"</p>
+            <p>&quot;Semper laboris possimus, molestiae, anim ornare? Molestie! Dictumst scelerisque error, autem leo. Autem integer diamlorem&quot;</p>
               <div className='flex items-center'>
                 <Image src={pic3} alt='pic1' className='w[60px] h-[60px] object-contain'/>
                 <p>Patricia Warren</p>
