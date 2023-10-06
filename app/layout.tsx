@@ -13,12 +13,7 @@ export const metadata: Metadata = {
   title: 'Infinite Shops',
   description: 'New Generation Furniture Shop',
 }
-// disable logs to the console when application is running in production
-if (process.env.NODE_ENV === 'production') {
-  console.log = () => {}
-  console.error = () => {}
-  console.debug = () => {}
-}
+
 export default function RootLayout({
   children,
   modal
@@ -29,7 +24,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.className} `}>
-       <SkeletonTheme baseColor="#202020" highlightColor="#444">
        <CartVisibility>
         <CartContext>
         <div className='flex flex-col min-h-screen'>
@@ -40,7 +34,6 @@ export default function RootLayout({
         {modal}
         </CartContext>
         </CartVisibility>
-       </SkeletonTheme>
         </body>
     </html>
   )

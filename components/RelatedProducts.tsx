@@ -1,6 +1,5 @@
 import { getProducts } from '@/lib/getProducts'
 import React from 'react'
-import Products from './Products'
 import Product from './Product'
 
 const RelatedProducts =async ({category,id}:{category:string,id:string}) => {
