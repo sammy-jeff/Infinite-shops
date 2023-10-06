@@ -1,11 +1,10 @@
 "use client"
-import { useCart, useCartLocalStorage } from '@/app_state/cart'
+import { useCart} from '@/app_state/cart'
 import { formatPrice } from '@/helper/priceFormatter'
 import { sanityConfig } from '@/lib/getProducts'
 import imageUrlBuilder  from '@sanity/image-url';
 import Image from 'next/image'
-import React, { useMemo } from 'react'
-const builder = imageUrlBuilder(sanityConfig)
+const builder = imageUrlBuilder(sanityConfig as any)
 const CartItems = () => {
   const cart = useCart((state:any)=>state.cart)
   const increment = useCart((state:any)=>state.increment)

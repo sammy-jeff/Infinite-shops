@@ -1,8 +1,12 @@
 import { cookies } from 'next/headers'
 import ReusableForm from '@/components/ReusableForm'
 import { createServerActionClient } from '@supabase/auth-helpers-nextjs';
-import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
+import { Metadata } from 'next';
+export const metadata: Metadata = {
+  title: 'Sign up',
+  description: 'User Sign up',
+}
 let errorMsg='';
 let successMessage = ''
 async function handleSignUp(formData:FormData){

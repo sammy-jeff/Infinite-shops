@@ -7,13 +7,16 @@ import certificate from '../assets/certificate-icon.webp'
 import truck from '../assets/truck.webp'
 import setup from '../assets/setup.webp'
 import warranty from '../assets/warranty.webp'
-import { getProducts } from '@/lib/getProducts'
-import Products from '@/components/Products'
 import pic1 from '../assets/pic20-free-img.png'
 import pic2 from '../assets/clients01-free-img.png'
 import pic3 from '../assets/pic19-free-img.png'
 import HomePLatestProducts from '@/components/HomePLatestProducts'
 import SkeletonUI from '@/components/SkeletonUI'
+import { Metadata } from 'next'
+export const metadata: Metadata = {
+  title: 'Home',
+  description:'Explore our Shop'
+}
 const Home =async () => {
   return (
     <main className='flex flex-1 justify-center'>

@@ -1,7 +1,11 @@
 import Products from "@/components/Products";
 import { getProducts } from "@/lib/getProducts";
+import { Metadata } from "next";
 
-
+export const metadata: Metadata = {
+  title: 'Sofas',
+  description: 'Sofa Category',
+}
 export default async function Sofa({searchParams}:{searchParams:{
   [key:string]:string|string[]|undefined
 }}) {

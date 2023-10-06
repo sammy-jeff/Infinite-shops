@@ -1,7 +1,11 @@
 import CartDetails from '@/components/CartDetails'
 import CartItems from '@/components/CartItems'
+import { Metadata } from 'next'
 import React from 'react'
-
+export const metadata: Metadata = {
+  title: 'Cart',
+  description: 'Cart Section',
+}
 const CartPage = () => {
   return (
     <main className='flex-1 flex justify-center'>

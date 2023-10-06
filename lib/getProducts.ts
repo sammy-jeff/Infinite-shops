@@ -1,6 +1,6 @@
 export const sanityConfig = {
     dataset: 'production',
-    projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+    projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID as any,
   };
   
  export  async function getProducts(query:string) {

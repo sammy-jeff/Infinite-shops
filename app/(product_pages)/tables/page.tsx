@@ -1,7 +1,11 @@
 import Products from "@/components/Products";
 import { getProducts } from "@/lib/getProducts";
+import { Metadata } from "next";
 
-let query = encodeURIComponent('*[_type=="products"&&category=="Table"]')
+export const metadata: Metadata = {
+  title: 'Tables',
+  description: 'Tables Category',
+}
 export default async function Tables({searchParams}:{searchParams:{
   [key:string]:string|string[]|undefined
 }}) {
