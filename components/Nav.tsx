@@ -5,10 +5,10 @@ import Logo from '../assets/transparent-logo.png'
 import Link from 'next/link'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faBars, faCaretDown, faShoppingCart, faTimes} from '@fortawesome/free-solid-svg-icons'
-import {  usePathname, useRouter } from 'next/navigation'
+import {  usePathname } from 'next/navigation'
 import { useCart } from '@/app_state/cart'
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs'
-import CartModal from './CartModal'
+
 const Nav = () => {
     const [menu,showMenu] = useState(false)
     const pathName = usePathname()

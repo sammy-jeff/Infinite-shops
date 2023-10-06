@@ -3,7 +3,7 @@ import ReusableForm from '@/components/ReusableForm'
 import {  createServerActionClient,createServerComponentClient } from '@supabase/auth-helpers-nextjs';
 import {redirect} from 'next/navigation';
 import { Metadata } from 'next';
-
+export const dynamic = 'force-dynamic';
 export const metadata: Metadata = {
   title: 'Sign In',
   description: 'User Sign in',

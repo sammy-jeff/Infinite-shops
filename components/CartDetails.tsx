@@ -1,7 +1,6 @@
 'use client'
 import { useCart } from '@/app_state/cart'
 import usehandleFlutterPayment from '@/custom_hooks/usePayment'
-import usePayment from '@/custom_hooks/usePayment'
 import { formatPrice } from '@/helper/priceFormatter'
 import React, { useEffect, useState } from 'react'
 

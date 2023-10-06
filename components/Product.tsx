@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { useCart } from '@/app_state/cart';
 import Link from 'next/link';
-const builder = imageUrlBuilder(sanityConfig)
+const builder = imageUrlBuilder(sanityConfig as any)
 
 const Product = ({product}:{product:any}) => {
     const grid = useView((state:any)=>state.grid)

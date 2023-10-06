@@ -9,7 +9,7 @@ import imageUrlBuilder  from '@sanity/image-url';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react'
-const builder = imageUrlBuilder(sanityConfig)
+const builder = imageUrlBuilder(sanityConfig as any)
 const ProductContent = ({prod}:{prod:any}) => {
   const addItem = useCart((state:any)=>state?.addToCart)
   const [num,setNum] = useState(1 as number)

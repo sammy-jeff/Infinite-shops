@@ -2,7 +2,6 @@
 import { useCart } from '@/app_state/cart'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { useRouter } from 'next/navigation'
 import React from 'react'
 
 const CartHeader = () => {

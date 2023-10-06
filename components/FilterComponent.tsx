@@ -1,6 +1,6 @@
 'use client'
 import useView from '@/app_state/view'
-import { faFilter, faList, faTh } from '@fortawesome/free-solid-svg-icons'
+import {  faList, faTh } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useEffect, useState } from 'react'
 import {usePathname, useRouter} from 'next/navigation'

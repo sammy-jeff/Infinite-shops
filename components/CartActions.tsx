@@ -1,12 +1,9 @@
 "use client"
 import { useCart } from '@/app_state/cart'
-
 import { formatPrice } from '@/helper/priceFormatter'
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs'
-import { redirect, useRouter } from 'next/navigation'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
-import { closePaymentModal } from 'flutterwave-react-v3'
 import usehandleFlutterPayment from '@/custom_hooks/usePayment'
 
 const CartActions = () => {

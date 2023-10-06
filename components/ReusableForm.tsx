@@ -1,8 +1,4 @@
-
-import { faEye } from '@fortawesome/free-solid-svg-icons'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
-
 import React from 'react'
 import Button from './Button'
 
