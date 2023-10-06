@@ -7,7 +7,6 @@ import { faCcMastercard } from '@fortawesome/free-brands-svg-icons/faCcMastercar
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import imageUrlBuilder  from '@sanity/image-url';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
 import React, { useState } from 'react'
 const builder = imageUrlBuilder(sanityConfig as any)
 const ProductContent = ({prod}:{prod:any}) => {

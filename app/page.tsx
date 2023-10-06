@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 }
 const Home =async () => {
   return (
-    <main className='flex flex-1 justify-center' key={Math.random()}>
+    <main className='flex flex-1 justify-center'>
       <div className='w-[93%]'>
       <section className='flex justify-center min-h-[70vh] relative mt-6 before:absolute  before:bg-[#fafafa] before:block before:w-full before:h-full' >
         <div className='w-[85%] h-full flex items-center absolute bg-[url(/bg-image-section-removebg-preview.png)] bg-no-repeat bg-cover lg:bg-left-top'>
