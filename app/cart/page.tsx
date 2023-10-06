@@ -1,0 +1,18 @@
+import CartDetails from '@/components/CartDetails'
+import CartItems from '@/components/CartItems'
+import React from 'react'
+
+const CartPage = () => {
+  return (
+    <main className='flex-1 flex justify-center'>
+      <div className='w-[93%] flex flex-col gap-y-4 lg:grid lg:grid-cols-2-uneq-col lg:gap-x-6 py-8'>
+      <div className='border py-4 h-fit'>
+      <CartItems/>
+      </div>
+      <CartDetails/>
+      </div>
+    </main>
+  )
+}
+
+export default CartPage
