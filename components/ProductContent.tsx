@@ -56,8 +56,8 @@ const ProductContent = ({prod}:{prod:any}) => {
             </div>
           <div className='mt-2 lg:mt-0 flex items-center gap-4'>
           <div className='grid grid-cols-3 w-[121.45px] h-[38px] border dark:border-black'>
-                <button className='flex h-full justify-center items-center  border-r border-black text-[#3a3a3a] dark:text-slate-200 text-[13px]' onClick={()=>setNum((prev:number)=>prev<=1?1:prev-1)}>-</button>
-                <span className='h-full flex justify-center items-center  border-r border-black text-[#3a3a3a] dark:text-slate-200 text-[13px]'>{num}</span>
+                <button className='flex h-full justify-center items-center  border-r dark:border-black text-[#3a3a3a] dark:text-slate-200 text-[13px]' onClick={()=>setNum((prev:number)=>prev<=1?1:prev-1)}>-</button>
+                <span className='h-full flex justify-center items-center  border-r dark:border-black text-[#3a3a3a] dark:text-slate-200 text-[13px]'>{num}</span>
                 <button className='h-full flex justify-center mt-auto items-center text-[#3a3a3a] dark:text-slate-200 text-[13px]' onClick={()=>setNum((prev:number)=>prev+1)}>+</button>
               </div>
               <button className='flex items-center py-1 px-2 text-[#607d8b] border-[2px] border-[#607d8b]' onClick={addProductToCart}>{loading?`Please wait...`:`Add to cart`}</button>
