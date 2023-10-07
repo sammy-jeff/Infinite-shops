@@ -1,6 +1,4 @@
 import React from 'react'
-import Skeleton from 'react-loading-skeleton'
-
 const SkeletonUI = ({num}:{num:number}) => {
     const arr = Array(num).fill(0)
   return (
