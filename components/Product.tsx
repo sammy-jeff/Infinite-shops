@@ -30,10 +30,10 @@ const Product = ({product}:{product:any}) => {
             </Link>
       </div>
            <Link href={`/product/${_id}`} className={`py-2 ${list&&`flex-1 py-0 flex flex-col justify-center`}`}>
-                <p className='text-[#3a3a3a] text-xs'>{product.category}</p>
+                <p className='text-[#3a3a3a] dark:text-slate-100 text-xs'>{product.category}</p>
                 <p className='text-[#607d8b] text-[13.68px] font-semibold capitalize mt-2'>{product.name.toLowerCase()}</p>
-                <p className='text-[#3a3a3a] font-bold text-[12.312px] mt-2'>{formatPrice(product.price)}</p>
-                {list&&<p className='mt-2 text-[#3a3a3a] text-[13.68px]'>
+                <p className='text-[#3a3a3a] dark:text-slate-100 font-bold text-[12.312px] mt-2'>{formatPrice(product.price)}</p>
+                {list&&<p className='mt-2 text-[#3a3a3a] dark:text-slate-100 text-[13.68px]'>
                     {product.description?.substring(0,40)}..
                   </p>}
            </Link>

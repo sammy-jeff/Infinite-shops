@@ -32,11 +32,11 @@ const CartActions = () => {
     
   return (
     <>
-    {cart.length?<div className='flex-[0.6] border-t flex flex-col'>
-        <div className='flex justify-center items-center flex-[0.2] border-b'>
+    {cart.length?<div className='flex-[0.6] border-t dark:border-black flex flex-col'>
+        <div className='flex justify-center items-center flex-[0.2] border-b dark:border-black'>
             <div className='flex justify-between items-center w-[95%] h-full'>
                 <h3 className='text-[#607d8b] text-[15px] font-semibold'>Subtotal:</h3>
-                <span className='text-[#3a3a3a] text-[14px]'>{formatPrice(totalPrice)}</span>
+                <span className='text-[#3a3a3a] dark:text-slate-200 text-[14px]'>{formatPrice(totalPrice)}</span>
             </div>
         </div>
         <div className='flex justify-center items-center flex-[1]'>

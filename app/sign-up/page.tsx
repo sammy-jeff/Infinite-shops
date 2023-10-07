@@ -48,9 +48,8 @@ const SignUp =async () => {
   // console.log(data);
   
   return (
-
     <main className='flex justify-center items-center min-h-[calc(100vh-80px)]'>
-      <form action={handleSignUp} className='border w-[min(80%,500px)] flex flex-col items-center py-6 backdrop-blur-md shadow-md'>
+      <form action={handleSignUp} className='border dark:border-black w-[min(80%,500px)] flex flex-col items-center py-6 backdrop-blur-md shadow-md'>
         <ReusableForm title={`Signup`} btnText={'signup'} leading={`Already have an account?`} link={`sign-in`} allow1={true} successMessage={successMessage} error={errorMsg}/>
       </form>
     </main>

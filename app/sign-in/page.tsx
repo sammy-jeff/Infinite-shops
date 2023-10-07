@@ -35,7 +35,7 @@ const SignIn =async () => {
   
   return (
     <main className='flex justify-center items-center min-h-[calc(100vh-80px)]'>
-      <form action={handleSignIn} className='border w-[min(80%,500px)] flex flex-col items-center py-6 backdrop-blur-md shadow-md'>
+      <form action={handleSignIn} className='border dark:border-black w-[min(80%,500px)] flex flex-col items-center py-6 backdrop-blur-md shadow-md'>
         <ReusableForm leading='New to infinite-shops?'  link='sign-up' title='Login' btnText='Login' allow={true} error={errorMsg}/>
       </form>
     </main>

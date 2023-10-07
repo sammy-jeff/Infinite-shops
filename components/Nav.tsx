@@ -59,12 +59,12 @@ const Nav = () => {
    
     
   return (
-    <header className={`flex h-[80px] justify-center w-full pt-6 pb-4 ${height>120&& 'fixed top-0 left-0 right-0 backdrop-blur-md bg-[rgba(255,255,255,0.7)] z-[1000]'}`}>
+    <header className={`flex h-[80px] justify-center w-full pt-6 pb-4 ${height>120&& 'fixed top-0 left-0 right-0 backdrop-blur-md bg-[rgba(255,255,255,0.7)] dark:bg-transparent z-[1000]'}`}>
         <div className='w-[93%] flex items-center h-full lg:w-[90%]'>
             <Link href={`/`} className='flex  align-middle flex-1 lg:flex-[0.07]'>
                 <Image className='w-[60px] h-auto block object-contain ' src={Logo} alt='company_logo'/>
             </Link>
-            <ul className={`h-[0px] overflow-hidden absolute left-0 right-0 top-[80px] z-10 bg-[#f9f9f9] ${menu&&`h-[190px] border overflow-y-auto`} lg:flex-1 lg:relative lg:h-full lg:bg-inherit lg:flex lg:top-0 lg:justify-between lg:left-auto lg:right-auto`}>
+            <ul className={`h-[0px] overflow-hidden absolute left-0 right-0 top-[80px] z-10 ${menu&&`h-[190px] border dark:border-none overflow-y-auto dark:bg-slate-800 bg-[#f9f9f9]`} lg:flex-1 lg:relative lg:h-full lg:bg-inherit lg:flex lg:top-0 lg:justify-between lg:left-auto lg:right-auto`}>
                 <div className='px-4 my-4 flex flex-col gap-y-4 lg:flex-row lg:gap-y-0 lg:items-center lg:gap-x-4'>
                     {/* <li className='link-styles border-none'><Link href={`#`}>All Products</Link></li> */}
                     <li className='link-styles'><Link href={`/all-products`}>All Products</Link></li>
@@ -82,7 +82,7 @@ const Nav = () => {
                                 <span><FontAwesomeIcon icon={faCaretDown} width={15}/></span>
                                 </p>
                             </div>
-                            <div className='absolute z-20 bg-white flex flex-col items-center top-8 border shadow-md py-4 px-1 gap-y-3 opacity-0 group-hover/items:opacity-100'>
+                            <div className='absolute z-20 bg-white dark:bg-slate-500 flex flex-col items-center top-8 border dark:border-black shadow-md py-4 px-1 gap-y-3 opacity-0 group-hover/items:opacity-100'>
                                 <button onClick={logout} className='border-b-1 cursor-pointer'>{logoutLoading ? 'Loading...' : 'Logout'}</button>
                                 <Link href={`/transactions`}>Transactions</Link>
                             </div>

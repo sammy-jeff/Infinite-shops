@@ -15,7 +15,7 @@ const Transactions =async () => {
   return (
     <main className='flex min-h-[calc(100vh-80px)] justify-center py-10'>
   <div className='w-full md:w-[85%] h-full flex flex-col'>
-    <h2 className='text-center text-[#3a3a3a] text-[clamp(20px,4vw,32px)] font-medium'>
+    <h2 className='text-center text-[#3a3a3a] dark:text-[#607d8b] text-[clamp(20px,4vw,32px)] font-medium'>
       Transactions Record
     </h2>
     {data?.length ? (

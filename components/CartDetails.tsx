@@ -15,9 +15,9 @@ const CartDetails = () => {
         setTotalPrice(calcTotalPrice)
     },[cart])
   return (
-    <div className='flex flex-col items-center border h-fit lg:sticky lg:top-28'>
-        <div className='w-full border-b p-4 bg-[#f0f0f0] font-semibold text-[#607d8b] text-[clamp(16px,4vw,18px)]'>Cart Totals</div>
-        <div className='w-[90%] text-[#3a3a3a]'>
+    <div className='flex flex-col items-center border dark:border-black h-fit lg:sticky lg:top-28'>
+        <div className='w-full border-b p-4 bg-[#f0f0f0] dark:bg-slate-800 font-semibold text-[#607d8b] text-[clamp(16px,4vw,18px)]'>Cart Totals</div>
+        <div className='w-[90%] text-[#3a3a3a] dark:text-slate-200'>
         <div className='flex flex-col gap-y-5'>
             <div className='border-b py-4 grid grid-cols-2'>
                 <p className='font-semibold'>Subtotal</p>
