@@ -59,7 +59,7 @@ const Nav = () => {
    
     
   return (
-    <header className={`flex h-[80px] justify-center w-full pt-6 pb-4 ${height>120&& 'fixed top-0 left-0 right-0 backdrop-blur-md bg-[rgba(255,255,255,0.7)] dark:bg-transparent z-[1000]'}`}>
+    <header className={`flex h-[80px] justify-center w-full pt-6 pb-4 transition-all duration-300 ease-in-out  ${height > 120 && 'fixed top-0 left-0 right-0  backdrop-blur-md bg-[rgba(255,255,255,0.7)] dark:bg-transparent z-[1000]'}`}>
         <div className='w-[93%] flex items-center h-full lg:w-[90%]'>
             <Link href={`/`} className='flex  align-middle flex-1 lg:flex-[0.07]'>
                 <Image className='w-[60px] h-auto block object-contain ' src={Logo} alt='company_logo'/>
