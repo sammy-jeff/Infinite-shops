@@ -1,26 +1,14 @@
 "use client"
 import { useCart } from '@/app_state/cart'
 import { formatPrice } from '@/helper/priceFormatter'
-import { createClientComponentClient } from '@supabase/auth-helpers-nextjs'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import usehandleFlutterPayment from '@/custom_hooks/usePayment'
 
 const CartActions = () => {
     const cart = useCart((state:any)=>state.cart)
-    const clearCart = useCart((state:any)=>state.clearCart)
     const [totalPrice,setTotalPrice] = useState(0)
-    const [session,setSession] = useState(null as any)
-    const supabase = createClientComponentClient()
-
-    useEffect(()=>{
-        const checkSession =async () => {
-          const {data} = await supabase.auth.getSession()
-          setSession(data.session as any)
-          
-        }
-        checkSession()
-      },[])
+    const closeCart = useCart((state:any)=>state.closeCart)
     useEffect(()=>{
         const calcTotalPrice = cart?.reduce((val:number,acc:any)=>{
             return val+acc.subTotal
@@ -45,7 +33,7 @@ const CartActions = () => {
                 <button className='w-full border-[2px] border-[#607d8b] p-4 flex justify-center items-center text-[#607db8] font-semibold text-[14px] mt-3' onClick={handleFlutterPayment}>Checkout</button>
             </div>
         </div>
-    </div>:<button>Continue Shopping</button>}
+    </div>:<Link href={`/all-products`} className='mx-auto mb-2' onClick={closeCart}>Continue Shopping</Link>}
     </>
   )
 }
