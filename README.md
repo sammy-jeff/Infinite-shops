@@ -112,6 +112,7 @@ Infinite Shops offers both Light Mode and Dark Mode themes to enhance the user e
 Use these cards if you want the payment to succeed.
 
 **Card1:**
+
 Type : Mastercard
 
 Card Number: 5531886652142950
@@ -125,6 +126,7 @@ Expiry: 09/32
 OTP: 12345
 
 **Card2:**
+
 Type : Visa card
 
 Card Number: 4187427415564246
