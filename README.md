@@ -93,7 +93,7 @@ Infinite Shops offers the following product sorting options:
 
 **Sign In:** Log in or create an account.
 
-**Sign Out:** Log out of your account.
+**Sign Up:** Create a new account.
 
 **Cart:** View and manage the contents of your shopping cart.
 
@@ -145,6 +145,10 @@ Tailwind CSS
 Flutterwave (Payment Gateway)
 
 Zustand (State Management)
+
+Supabase (Backend and Authentication)
+
+Sanity.io (Content Management)
 
 ## Contact
 
