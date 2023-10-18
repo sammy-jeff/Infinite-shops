@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${poppins.className} `}>
-       <ThemeProvider defaultTheme='system' enableSystem attribute='class' disableTransitionOnChange>
+       <ThemeProvider attribute='class' disableTransitionOnChange>
         <CartVisibility>
           <CartContext>
           <div className='flex flex-col min-h-screen'>

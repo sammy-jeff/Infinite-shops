@@ -11,9 +11,9 @@ export const metadata: Metadata = {
 export default async function Home({searchParams}:{searchParams:{
   [key:string]:string|string[]|undefined
 }}) {
-  // let query = encodeURIComponent(`*[_type=="products"]|order(${searchParams.sort})`)
-  // const products =await getProducts(query)
-  const products = await fetchProducts(searchParams,`[0...5]`)
+  let query = encodeURIComponent(`*[_type=="products"]|order(${searchParams.sort})`)
+  const products =await getProducts(query)
+  // const products = await fetchProducts(searchParams,`[0...5]`)
   return (
     <main className="mt-12">
       <Products products={products}/>   

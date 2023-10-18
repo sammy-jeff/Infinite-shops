@@ -1,5 +1,5 @@
 'use client'
-import { faLightbulb, faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
+import { faLightbulb, faMoon } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import {useTheme} from 'next-themes'
