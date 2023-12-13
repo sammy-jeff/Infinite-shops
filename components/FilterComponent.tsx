@@ -18,6 +18,9 @@ const FilterComponent = () => {
     else if (pathName.startsWith('/product')) {
       return
     }
+    else if(!selectedValue){
+      router.push(`${pathName}/?sort=default`,{scroll:true})
+    }
     router.push(`${pathName}/?sort=${selectedValue}`,{scroll:true})
   },[selectedValue,pathName])
   console.log(pathName);

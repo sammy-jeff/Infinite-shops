@@ -67,10 +67,10 @@ const Nav = () => {
             <ul className={`h-[0px] overflow-hidden absolute left-0 right-0 top-[80px] z-10 ${menu&&`h-[190px] border dark:border-none overflow-y-auto dark:bg-slate-800 bg-[#f9f9f9]`} lg:flex-1 lg:relative lg:h-full lg:bg-inherit lg:flex lg:top-0 lg:justify-between lg:left-auto lg:right-auto`}>
                 <div className='px-4 my-4 flex flex-col gap-y-4 lg:flex-row lg:gap-y-0 lg:items-center lg:gap-x-4'>
                     {/* <li className='link-styles border-none'><Link href={`#`}>All Products</Link></li> */}
-                    <li className='link-styles'><Link href={`/all-products`}>All Products</Link></li>
-                    <li className='link-styles'><Link href={`/sofa`}>Sofa</Link></li>
-                    <li className='link-styles'><Link href={`/chairs`}>Chairs</Link></li>
-                    <li className='link-styles'><Link href={`/tables`}>Tables</Link></li>
+                    <li className='link-styles'><Link href={`/all-products?sort=default`}>All Products</Link></li>
+                    <li className='link-styles'><Link href={`/sofa?sort=default`}>Sofa</Link></li>
+                    <li className='link-styles'><Link href={`/chairs?sort=default`}>Chairs</Link></li>
+                    <li className='link-styles'><Link href={`/tables?sort=default`}>Tables</Link></li>
                 </div>
             </ul>
             <div className='flex items-center gap-x-4 px-4'>
