@@ -14,6 +14,8 @@ export default async function Home({searchParams}:{searchParams:{
   let query = encodeURIComponent(`*[_type=="products"]|order(${searchParams.sort})`)
   const products =await getProducts(query)
   // const products = await fetchProducts(searchParams,`[0...5]`)
+  console.log(searchParams?.sort);
+  
   return (
     <main className="mt-12">
       <Products products={products}/>   

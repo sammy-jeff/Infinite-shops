@@ -2,32 +2,38 @@
 import useView from '@/app_state/view'
 import {  faList, faTh } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React, { useEffect, useState } from 'react'
-import {usePathname, useRouter} from 'next/navigation'
+import {usePathname, useRouter, useSearchParams} from 'next/navigation'
 const FilterComponent = () => {
-  const router = useRouter()
+  // const router = useRouter()
   const pathName = usePathname()
+  const { replace } = useRouter();
   const handleList = useView((state:any)=>state.listView)
   const handleGrid = useView((state:any)=>state.gridView)
-  const [selectedValue,setSelectedValue]= useState('default')
+  const searchParams = useSearchParams()
+  const handleChange = (term:string)=>{
+    const params = new URLSearchParams(searchParams);
+    if (term) {
+      params.set('sort', term);
+    } else {
+      params.delete('sort');
+    }
+    replace(`${pathName}?${params.toString()}`);
+  }
   // useEffect(()=>{
-  //   setLocalStorageItem('selectedValue',selectedValue)
-  // },[selectedValue])
-  useEffect(()=>{
-    if (pathName==='/cart') return
-    else if (pathName.startsWith('/product')) {
-      return
-    }
-    else if(!selectedValue){
-      router.push(`${pathName}/?sort=default`,{scroll:true})
-    }
-    router.push(`${pathName}/?sort=${selectedValue}`,{scroll:true})
-  },[selectedValue,pathName])
-  console.log(pathName);
+  //   if (pathName==='/cart') return
+  //   else if (pathName.startsWith('/product')) {
+  //     return
+  //   }
+  //   else if(!selectedValue){
+  //     router.push(`${pathName}/?sort=default`,{scroll:true})
+  //   }
+  //   router.push(`${pathName}/?sort=${selectedValue}`,{scroll:true})
+  // },[selectedValue,pathName])
+  // console.log(pathName);
   
   return (
     <div className='sticky bottom-0 bg-[#f8f8f8] dark:bg-transparent dark:backdrop-blur-md dark:border-none border h-[65px] w-full flex justify-center items-center gap-x-3'>
-        <select value={selectedValue} onChange={(e)=>setSelectedValue(e.target.value)} name="sort" className='border-none bg-transparent text-sm text-[#666] dark:text-white dark:bg-[black] outline-none'>
+        <select defaultValue={searchParams.get('sort')?.toString()} onChange={(e)=>handleChange(e.target.value)} name="sort" className='border-none bg-transparent text-sm text-[#666] dark:text-white dark:bg-[black] outline-none'>
             <option value="default">Default sorting</option>
             <option value={`_createdAt desc`}>Sort by latest</option>
             <option value={`price asc`}>Sort by price:low to high</option>
