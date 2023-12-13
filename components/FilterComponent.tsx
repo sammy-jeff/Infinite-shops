@@ -4,21 +4,6 @@ import {  faList, faTh } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useEffect, useState } from 'react'
 import {usePathname, useRouter} from 'next/navigation'
-// Function to set data in localStorage
-//  const setLocalStorageItem = (key:string, value:string) => {
-//   if (typeof window !== 'undefined') {
-//     localStorage.setItem(key, JSON.stringify(value));
-//   }
-// };
-
-// // Function to get data from localStorage
-// export const getLocalStorageItem = (key:string) => {
-//   if (typeof window !== 'undefined') {
-//     const item = localStorage.getItem(key);
-//     return item ? JSON.parse(item) : null;
-//   }
-//   return null;
-// };
 const FilterComponent = () => {
   const router = useRouter()
   const pathName = usePathname()
