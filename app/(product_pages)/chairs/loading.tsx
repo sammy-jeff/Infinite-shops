@@ -4,7 +4,7 @@ import React from 'react'
 const ChairLoading = () => {
   return (
     <div className='lg:grid-cols-4 gap-y-4'>
-        <SkeletonUI num={8}/>
+        <SkeletonUI num={7}/>
     </div>
   )
 }

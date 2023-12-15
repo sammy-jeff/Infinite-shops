@@ -6,7 +6,7 @@ import {usePathname, useRouter, useSearchParams} from 'next/navigation'
 const FilterComponent = () => {
   // const router = useRouter()
   const pathName = usePathname()
-  const { replace } = useRouter();
+  const { replace,push } = useRouter();
   const handleList = useView((state:any)=>state.listView)
   const handleGrid = useView((state:any)=>state.gridView)
   const searchParams = useSearchParams()
@@ -19,22 +19,11 @@ const FilterComponent = () => {
     }
     replace(`${pathName}?${params.toString()}`);
   }
-  // useEffect(()=>{
-  //   if (pathName==='/cart') return
-  //   else if (pathName.startsWith('/product')) {
-  //     return
-  //   }
-  //   else if(!selectedValue){
-  //     router.push(`${pathName}/?sort=default`,{scroll:true})
-  //   }
-  //   router.push(`${pathName}/?sort=${selectedValue}`,{scroll:true})
-  // },[selectedValue,pathName])
-  // console.log(pathName);
   
   return (
     <div className='sticky bottom-0 bg-[#f8f8f8] dark:bg-transparent dark:backdrop-blur-md dark:border-none border h-[65px] w-full flex justify-center items-center gap-x-3'>
         <select defaultValue={searchParams.get('sort')?.toString()} onChange={(e)=>handleChange(e.target.value)} name="sort" className='border-none bg-transparent text-sm text-[#666] dark:text-white dark:bg-[black] outline-none'>
-            <option value="default">Default sorting</option>
+            {/* <option value="default">Default sorting</option> */}
             <option value={`_createdAt desc`}>Sort by latest</option>
             <option value={`price asc`}>Sort by price:low to high</option>
             <option value={`price desc`}>Sort by price:high to low</option>
