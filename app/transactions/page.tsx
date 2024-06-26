@@ -8,6 +8,7 @@ import { Metadata } from 'next'
 export const dynamic = 'force-dynamic';
 export const metadata:Metadata = {
   title:'Transactions',
+  description: 'user transactions tracking'
 }
 const Transactions =async () => {
     const supabase = createServerComponentClient({cookies})
