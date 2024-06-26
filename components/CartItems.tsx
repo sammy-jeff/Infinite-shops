@@ -19,7 +19,7 @@ const CartItems = () => {
   return (
     <div className='w-full h-full flex-1 flex flex-col items-center overflow-y-auto relative'>
       {
-        isClient?cart.map((item:any,index:number)=>(
+        isClient && cart.length?cart.map((item:any,index:number)=>(
           <div key={item?._id} className={`w-[95%] flex gap-x-4  mt-8 ${index!==cart?.length-1&&'border-b dark:border-black'} pb-4`}>
             <Image className='object-contain h-auto w-auto' src={builder.image(item?.image).url()} alt={item?.name} height={50} width={55} priority/>
             <div className='flex-1'>
