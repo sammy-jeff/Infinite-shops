@@ -2,7 +2,7 @@
 import FilterComponent from '@/components/FilterComponent'
 
 
-import React, { ReactNode } from 'react'
+import React, { ReactNode, Suspense } from 'react'
 
 const ProductPagesLayout = ({children}:{children:ReactNode}) => {
   return (
@@ -13,7 +13,9 @@ const ProductPagesLayout = ({children}:{children:ReactNode}) => {
             </div>
         </div>
         
-        <FilterComponent/>
+        <Suspense>
+            <FilterComponent/>
+        </Suspense>
     </div>
   )
 }
