@@ -4,7 +4,11 @@ import { PaymentType } from '@/types/PaymentType'
 import { redirect } from 'next/navigation'
 import { formatPrice } from '@/helper/priceFormatter'
 import { formatDate } from '@/helper/dateFormatter'
+import { Metadata } from 'next'
 export const dynamic = 'force-dynamic';
+export const metadata:Metadata = {
+  title:'Transactions',
+}
 const Transactions =async () => {
     const supabase = createServerComponentClient({cookies})
     const {data,error} = await supabase.from('User_Transactions').select()
